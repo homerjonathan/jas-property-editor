@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="jas-property-editor">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `jas-property-editor`
+     * Property Editor
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class JasPropertyEditor extends Polymer.Element {
+      static get is() { return 'jas-property-editor'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'jas-property-editor'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(JasPropertyEditor.is, JasPropertyEditor);
+  </script>
+</dom-module>
